@@ -129,6 +129,72 @@ b2.addHit();
 //plus(70, 30, 80, 20, 90, 45);
 
 // 아주중요해요.
-// 전개구문
+// 전개구문 - 열어서 펼치는 것!
+
+const copy = boardList;
+
+// boardList는 당연히 b2 객체
+// copy도 b2객체
+
+b2.addHit();
+b2.addHit();
+b2.addHit();
 
 console.log(boardList);
+console.log("=======================");
+console.log(copy);
+
+const copy2 = [...boardList];
+
+b2.addHit();
+b2.addHit();
+b2.addHit();
+
+console.log("=======================");
+console.log(copy2);
+
+b2.addHit();
+b2.addHit();
+b2.addHit();
+
+//  boardList => b2     hit : 10
+//       copy => b2     hit : 10     const copy = boardList;
+//      copy2 => b2     hit : 10    const copy2 = [...boardList];
+
+console.log("ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ");
+console.log("ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ");
+console.log("ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ");
+console.log("ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ");
+console.log("ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ");
+console.log(boardList);
+console.log("ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ");
+console.log(copy);
+console.log("ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ");
+console.log(copy2);
+
+/////////////////////////////////////////////////////
+console.log(boardList === copy);
+console.log(boardList === copy2);
+
+////////////////////////////////////////////////////
+
+const b4 = new Board();
+
+b4.setBId(4);
+b4.setTitle("테스트4");
+b4.setContent("테스트4");
+b4.setHit(0);
+b4.setCreatedAt(new Date());
+
+boardList.push(b4);
+
+console.log("ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ");
+console.log("ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ");
+console.log("ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ");
+console.log("ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ");
+console.log("ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ");
+console.log(boardList);             // boardList는 당연히 b4가 추가되었어요!
+console.log("ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ");
+console.log(copy);                  // 복사되었기 때문에 copy도 b4가 존재한다.  완전히 카피! 주소까지 복제
+console.log("ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ");
+console.log(copy2);                 // 독립적인 데이터 이기 때문에 b4가 존재하지 않는다!    불완전 카피! 데이터만 복제
